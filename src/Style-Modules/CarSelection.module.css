@@ -1,0 +1,34 @@
+.gridContainer {
+    display: grid;
+    background-image: url('../assets/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.5fr 2.4fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". logo ."
+      ". results ."
+      ". . .";
+  }
+  
+  .logo {
+      grid-area: logo;
+    }
+  
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . .";
+    grid-area: results;
+    background:rgba(255, 255, 255, 0.356);
+  }
+  
+
+.logoImg{
+    height: 50px;
+}
+  

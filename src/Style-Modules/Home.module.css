@@ -1,0 +1,65 @@
+.gridContainer {
+    display: grid;
+    background-image: url('../assets/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 0.1fr 2.9fr 0.9fr 0.1fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". logo info ."
+      ". dashboard reservations ."
+      ". menu returns .";
+  }
+
+  
+  .dashboard {
+      grid-area: dashboard;
+      height: 430px;
+      background-color: grey;
+      margin-top: -2%;
+      width: 980px;
+    }
+  .menu { 
+    grid-area: menu;
+ }
+  .reservations { 
+      grid-area: reservations;
+      height: 300px;
+      background-color: grey;
+    }
+  .returns {
+      grid-area: returns;
+      height: 100px;
+      background-color: grey;
+    }
+  .info { 
+      grid-area: info;
+      height: fit-content;
+    }
+
+    .logo { 
+        grid-area: logo;
+        height: fit-content;
+    }
+
+.logoImg{
+    height: 50px;
+}
+
+.menuButtons{
+    height: 70px;
+    width: 310px;
+    font-size: 20px;
+    margin-right: 25px;
+    margin-top: 1%;
+    background-color: #7aeb68a2;
+    color: white;
+}
+
+.menuButtons:hover{
+    background-color: white;
+    color: #7aeb68a2;
+    cursor: pointer;
+
+}

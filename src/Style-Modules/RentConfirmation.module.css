@@ -1,0 +1,63 @@
+.gridContainer {
+    display: grid;
+    background-image: url('../assets/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.5fr 2.2fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". logo ."
+      ". confirmation ."
+      ". . .";
+  }
+  
+  .logo {
+      grid-area: logo;
+    }
+  
+  .confirmation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "pOne pTwo";
+    grid-area: confirmation;
+  }
+  
+  .pOne {
+    grid-area: pOne;
+ }
+  
+  .pTwo {
+      grid-area: pTwo;
+    }
+
+    .logoImg{
+        height: 50px;
+    }
+
+    .button{
+        display: block;
+        margin-left: auto;
+        margin-right:auto ;
+        height: 40px;
+        width: 130px;
+        color: rgb(238, 224, 224);
+        background-color: #7AEB68;
+        border-radius: 10%;
+        font-size: 20px;
+      }
+      
+      .button:hover{
+        background-color: white;
+        color: grey;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      .carImg{
+          height:150px;
+      }
+  

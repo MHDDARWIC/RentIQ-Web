@@ -1,0 +1,78 @@
+.gridContainer {
+    display: grid;
+    background-image: url('../assets/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 0.1fr 2fr 0.1fr;
+    grid-template-rows: 0.4fr 3fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". logo ."
+      ". form ."
+      ". . .";
+  }
+  
+  .logo {
+      grid-area: logo;
+    }
+  
+  .form {
+    display: grid;
+    grid-template-columns: 1.5fr 0.1fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "search . results";
+    grid-area: form;
+  }
+  
+  .search {
+    grid-area: search;
+ }
+  
+  .results {
+      grid-area: results;
+}
+
+.logoImg{
+    height: 50px;
+}
+
+.inputField{
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+    height: 40px;
+    width: 400px;
+    font-size: 15px;
+    color: rgb(90, 90, 90);
+    background-color: rgba(255, 255, 255, 0.555);
+    margin-top:-2%;
+  }
+  
+  .labels{
+    display: block;
+    position: relative;
+    left: 19%;
+    color: rgb(238, 224, 224);
+  }
+
+  .button{
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+    height: 40px;
+    width: 130px;
+    color: rgb(238, 224, 224);
+    background-color: #7AEB68;
+    border-radius: 10%;
+    font-size: 20px;
+  }
+  
+  .button:hover{
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  

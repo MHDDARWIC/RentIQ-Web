@@ -1,0 +1,42 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 2.8fr 0.1fr;
+    grid-template-rows: 0.1fr 2.8fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". car ."
+      ". . .";
+     
+  }
+  
+  .car {
+    display: grid;
+    grid-template-columns: 1.3fr 0.4fr 1.3fr;
+    grid-template-rows: 1.7fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "carImage . carInfo"
+      ". select .";
+    grid-area: car;
+    width: fit-content;
+    background-color: rgba(73, 65, 65, 0.274);
+    margin-top: 2%;
+  }
+  
+  .select {
+      grid-area: select;
+    }
+  
+  .carImage {
+      grid-area: carImage;
+    }
+  
+  .carInfo {
+      grid-area: carInfo;
+    }
+
+    .carImg{
+      height:100px;
+    }
+  
