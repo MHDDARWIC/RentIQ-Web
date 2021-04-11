@@ -12,6 +12,7 @@ import Rent from './Components/Rent';
 import CarSelection from './Components/CarSelection';
 import Reserve from './Components/Reserve';
 import RentConfirmation from './Components/RentConfirmation';
+import ManageInventory from './Components/ManageInventory';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <PrivateRoute exact path="/car-selection"><CarSelection/></PrivateRoute>
           <PrivateRoute exact path="/reserve-info"><Reserve/></PrivateRoute>
           <PrivateRoute exact path="/rent-confirmation"><RentConfirmation/></PrivateRoute>
+          <PrivateRoute exact path="/manage-inventory"><ManageInventory/></PrivateRoute>
         </Switch> 
       </AuthProvider>
 

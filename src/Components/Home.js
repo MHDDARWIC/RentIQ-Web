@@ -40,7 +40,7 @@ function Home(){
             <div className={styles.menu}>
                 <button className={styles.menuButtons} onClick={() => {history.push('/rent-info')}}>Rent</button>
                 <button className={styles.menuButtons} onClick={() => {history.push('/reserve-info')}}>Reserve</button>
-                <button className={styles.menuButtons}>Manage Inventory</button>
+                <button className={styles.menuButtons} onClick={() => {history.push('/manage-inventory')}}>Manage Inventory</button>
                 <button className={styles.menuButtons}>Manage Rentals</button>
                 <button className={styles.menuButtons}>Manage Reservations</button>
                 <button className={styles.menuButtons}>Statistics</button>
