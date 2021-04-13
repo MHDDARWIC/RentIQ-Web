@@ -9,15 +9,21 @@ import { useGetData } from "../useGetData";
 
 
 function AddCar() {
-    const [carMake, setCarMake] = useState("");
     const [carYear, setCarYear] = useState("");
-    const [carModel, setCarModel] = useState("");
+    const [carIMG, setCarIMG] = useState("");
+    const [mileage,setMileage]=useState("");
+    const [rate,setRate]=useState("");
+    const [color,setColor]=useState("");
+    const [vin, setVin] = useState("");
     const [carRate, setCarRate] = useState("");
     const { currentUser } = useAuth();
     const [documents] = useGetData();
     const [currentDoc, setCurrentDoc] = useState("");
     const [cars, setCars] = useState("");
     const history = useHistory();
+
+    const [carData, setCarData] = useState({});
+
 
     const db = firebase.firestore();
 
@@ -35,13 +41,23 @@ function AddCar() {
                 setCars(documents[j].value.cars); //get the cars of the business
                 //console.log(currentDoc.value.cars.length);
                 console.log(documents[j].value.cars);
+
             }
         }
 
-    });
+    },);
 
-
-
+    const getCar = async (e) => {
+        e.preventDefault();
+        const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvaluesextended/${vin}?format=json&modelyear=${carYear}`); //make request, receive response
+        const data = await response.json(); //await then
+         //get the data and format it to JSON. Data is stored in this variable now.
+        setCarData(data.Results[0]);
+        console.log(data.Results[0].BodyClass);
+        console.log(carData.BodyClass);
+        console.log(carData.Make);
+        setCarIMG(`https://www.carlogos.org/car-logos/${carData.Make.toLowerCase()}-logo.png`);
+    }
 
 
     function handleAdd(e) {
@@ -52,11 +68,18 @@ function AddCar() {
         } else {
             let car = {
                 "key": currentDoc.value.cars.length,
-                "carMake": carMake,
+                "vin": vin,
+                "carMake": carData.Make,
                 "carYear": carYear,
-                "carModel": carModel,
-                "fuelCapacity": "1", //tbc
-                "carImg": "url", //tbc,
+                "carModel": carData.Model,
+                "doors": carData.Doors,
+                "bodyClass": carData.BodyClass,
+                'fuelTypePrimary': carData.FuelTypePrimary,
+                'VehicleType': carData.VehicleType,
+                "engineCylinders": carData.EngineCylinders,
+                "engineHP": carData.EngineHP,
+                "trim": carData.Trim,
+                "carImg": carIMG, //tbc,
                 "isRented": false,
                 "isReserved": false,
                 "needMaintenance": false,
@@ -70,8 +93,9 @@ function AddCar() {
                 "currentReserverEmail": "",
                 "currentRenterDOB": "",
                 "carReturnDate": "",
-                "mileage": 1,//tbc
-                "rate": carRate,
+                "mileage": mileage,
+                "rate": rate,
+                "color":color,
                 "lastRented": "",
                 "reservationPickupDate": "",
                 "reservationPickupTime": "",
@@ -112,24 +136,34 @@ function AddCar() {
 
             <div className={styles.form}>
                 <div className={styles.search}>
-                    <form onSubmit={handleAdd}>
-                        <label for="carMake" className={styles.labels}>Car Make:</label>
-                        <br />
-                        <input type="text" id="carMake" value={carMake} onChange={(e) => setCarMake(e.target.value)} className={styles.inputField} required />
+                    <form onSubmit={getCar}>
 
+                        <label for="vin" className={styles.labels}>Enter vin number:</label>
                         <br />
-
-                        <label for="carModel" className={styles.labels}>Car Model:</label>
-                        <br />
-                        <input type="text" id="carModel" value={carModel} onChange={(e) => setCarModel(e.target.value)} className={styles.inputField} required />
-
+                        <input type="text" id="vin" value={vin} onChange={(e) => setVin(e.target.value)} className={styles.inputField} required />
                         <br />
 
+                        
                         <label for="carYear" className={styles.labels}>Car Year:</label>
                         <br />
                         <input type="text" id="carYear" value={carYear} onChange={(e) => setCarYear(e.target.value)} className={styles.inputField} required />
-
                         <br />
+
+                        <label for="mileage" className={styles.labels}>Mileage:</label>
+                        <br />
+                        <input type="text" id="mileage" value={mileage} onChange={(e) => setMileage(e.target.value)} className={styles.inputField} required />
+                        <br />
+
+                        <label for="rate" className={styles.labels}>Daily Rate:</label>
+                        <br />
+                        <input type="text" id="rate" value={rate} onChange={(e) => setRate(e.target.value)} className={styles.inputField} required />
+                        <br />
+
+                        <label for="color" className={styles.labels}>Car Color:</label>
+                        <br />
+                        <input type="text" id="color" value={color} onChange={(e) => setColor(e.target.value)} className={styles.inputField} required />
+                        <br />
+                        
 
                         <button type="submit" className={styles.button}>Search</button>
 
@@ -137,15 +171,15 @@ function AddCar() {
                 </div>
 
                 <div className={styles.results}>
-                    <span>Values</span>
-                    {documents.map((documents) => (
-                        <div key={documents.id}>
-                            <div>
-                                Document: {documents.id} {documents.value.businessName}
-                            </div>
-                        </div>
-                    ))}
-
+                    <img src={carIMG} />
+                    <p>{carData.Make} {carData.Model} {carYear}</p>
+                    <p>Vehicle Type: {carData.VehicleType}</p>
+                    <p>Body Class: {carData.BodyClass}</p>
+                    <p>Number Of Doors: {carData.Doors}</p>
+                    <p>Primary Fuel Type: {carData.FuelTypePrimary}</p>
+                    <p>Engine Horsepower: {carData.EngineHP} HP</p>
+                    <p>Trim: {carData.Trim}</p>
+                    <button onClick={handleAdd}>Add Car!</button>
                 </div>
 
             </div>

@@ -7,7 +7,7 @@ function CarAll(props){
         <div className={styles.gridContainer}>
             <div className={styles.car}>
                 <div className={styles.image}>
-                    <img src={temp} className={styles.carImg}/>
+                    <img src={car.carImg} className={styles.carImg}/>
                 </div>
 
                 <div className={styles.info}>
