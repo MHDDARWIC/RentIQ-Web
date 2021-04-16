@@ -3,66 +3,55 @@ import logo from '../assets/rentiq.png';
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import DatabaseService from '../DatabaseService';
 import firebase from "firebase";
 import { useGetData } from "../useGetData";
 
+// console.log(currentUser.email);
+    // console.log(documents[j].value.email);
+    // console.log(documents[j].value.businessName);
+    //console.log(currentDoc.value.cars.length);
+    //console.log(documents[j].value.cars);
+    // console.log(carData.BodyClass);
+    // console.log(carData.Make);
 
 function AddCar() {
-    const [carYear, setCarYear] = useState("");
-    const [carIMG, setCarIMG] = useState("");
-    const [mileage,setMileage]=useState("");
-    const [rate,setRate]=useState("");
-    const [color,setColor]=useState("");
     const [vin, setVin] = useState("");
-    const [carRate, setCarRate] = useState("");
+    const [carYear, setCarYear] = useState("");
+    const [mileage, setMileage] = useState("");
+    const [rate, setRate] = useState("");
+    const [color, setColor] = useState("");
+    const [carIMG, setCarIMG] = useState("");
     const { currentUser } = useAuth();
     const [documents] = useGetData();
     const [currentDoc, setCurrentDoc] = useState("");
     const [cars, setCars] = useState("");
     const history = useHistory();
-
     const [carData, setCarData] = useState({});
-
 
     const db = firebase.firestore();
 
-
     useEffect(() => {
         //getting the specific doc out of all the docs
+        console.log("redered");
         for (var j = 0; j < documents.length; j++) {
-
-            console.log(currentUser.email);
-            console.log(documents[j].value.email);
             if (documents[j].value.email === currentUser.email) {
-                console.log("belongs to ")
-                // console.log(documents[j].value.businessName);
                 setCurrentDoc(documents[j]);
                 setCars(documents[j].value.cars); //get the cars of the business
-                //console.log(currentDoc.value.cars.length);
-                console.log(documents[j].value.cars);
-
             }
         }
+    });
 
-    },);
-
-    const getCar = async (e) => {
+    async function getCar(e) {
         e.preventDefault();
         const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvaluesextended/${vin}?format=json&modelyear=${carYear}`); //make request, receive response
-        const data = await response.json(); //await then
-         //get the data and format it to JSON. Data is stored in this variable now.
-        setCarData(data.Results[0]);
+        const data = await response.json();
         console.log(data.Results[0].BodyClass);
-        console.log(carData.BodyClass);
-        console.log(carData.Make);
-        setCarIMG(`https://www.carlogos.org/car-logos/${carData.Make.toLowerCase()}-logo.png`);
+        setCarData(data.Results[0]);
+        setCarIMG(`https://www.carlogos.org/car-logos/${data.Results[0].Make.toLowerCase()}-logo.png`);
     }
-
 
     function handleAdd(e) {
         e.preventDefault();
-        //TODO: before pushing, check inventory capacity
         if (currentDoc.value.cars.length > currentDoc.value.inventoryCapacity) {
             history.push('/failure-add');
         } else {
@@ -79,7 +68,7 @@ function AddCar() {
                 "engineCylinders": carData.EngineCylinders,
                 "engineHP": carData.EngineHP,
                 "trim": carData.Trim,
-                "carImg": carIMG, //tbc,
+                "carImg": carIMG,
                 "isRented": false,
                 "isReserved": false,
                 "needMaintenance": false,
@@ -95,7 +84,7 @@ function AddCar() {
                 "carReturnDate": "",
                 "mileage": mileage,
                 "rate": rate,
-                "color":color,
+                "color": color,
                 "lastRented": "",
                 "reservationPickupDate": "",
                 "reservationPickupTime": "",
@@ -108,11 +97,6 @@ function AddCar() {
             db.collection("businesses")
                 .doc(currentDoc.id)
                 .update({
-                    //old used set instead of update
-                    // email:currentUser.email,
-                    // phone:currentDoc.value.phone,
-                    // inventoryCapacity:currentDoc.value.inventoryCapacity,
-                    // businessName:currentDoc.value.businessName,
                     cars: cars
                 })
                 .then(function () {
@@ -143,7 +127,7 @@ function AddCar() {
                         <input type="text" id="vin" value={vin} onChange={(e) => setVin(e.target.value)} className={styles.inputField} required />
                         <br />
 
-                        
+
                         <label for="carYear" className={styles.labels}>Car Year:</label>
                         <br />
                         <input type="text" id="carYear" value={carYear} onChange={(e) => setCarYear(e.target.value)} className={styles.inputField} required />
@@ -163,7 +147,7 @@ function AddCar() {
                         <br />
                         <input type="text" id="color" value={color} onChange={(e) => setColor(e.target.value)} className={styles.inputField} required />
                         <br />
-                        
+
 
                         <button type="submit" className={styles.button}>Search</button>
 

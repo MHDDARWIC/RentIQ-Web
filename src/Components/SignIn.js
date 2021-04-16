@@ -2,7 +2,8 @@ import { useState } from "react";
 import styles from '../Style-Modules/SignIn.module.css';
 import logo from '../assets/rentiq.png';
 import {Link, useHistory} from 'react-router-dom';
-import {useAuth} from '../context/AuthContext'
+import {useAuth} from '../context/AuthContext';
+
 function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -10,16 +11,6 @@ function SignIn() {
     const [loading,setLoading]=useState(false);
     const {signin,currentUser}=useAuth();
     const history =useHistory();
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     if(checkPassword() === true){
-    //         setErrorMessage("ERROR: Password cannot be less that 8 characters.");
-    //         setPassword("");
-    //     } else{
-    //         setErrorMessage("");
-    //     }
-    // }
 
     async function handleSubmit(e){
         e.preventDefault();
@@ -29,18 +20,11 @@ function SignIn() {
                 await signin(email,password); 
                 history.push('/')
             } catch{
-                setErrorMessage("ERROR: Failed to Sign In")
+                setErrorMessage("Failed to Sign In - Inavlid Email or Password ");
             }
             setLoading(false);
     }
 
-    const checkPassword=()=>{
-        if(password.length<8){
-            return true;
-        } else{
-            return false;
-        }
-    }
     return (
         <div className={styles.gridContainer}>
             <div className={styles.logo}>

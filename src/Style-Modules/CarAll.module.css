@@ -18,7 +18,10 @@
       "image . info"
       "maintenance . remove";
     grid-area: car;
-    background-color: rgba(128, 128, 128, 0.493);
+    background-color: rgba(128, 128, 128, 0.384);
+    height: fit-content;
+    max-height:90%;
+    border-radius: 20px;
   }
   
   .image {
@@ -39,5 +42,20 @@
 
  .carImg{
      height: 150px;
+ }
+
+ .infoText{
+   color: white;
+   font-size: 15px;
+   text-align: center;
+ }
+
+ .buttons{
+   height: 50px;
+   width: 200px;
+   background-color: #68fc68ab;
+   color: white;
+   font-size: 15px;
+   border-radius: 20px;
  }
   
