@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.4fr 2.5fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". logo ."
+      ". details ."
+      ". . .";
+  }
+  
+  .logo {
+    grid-area: logo;
+    margin-left: auto;
+      margin-right: auto;
+ }
+  
+  .details {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    background:rgba(128, 128, 128, 0.363);
+  border: solid 1px rgba(255, 255, 255, 0.356);
+  border-radius: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "information"
+      "input";
+    grid-area: details;
+    width: fit-content;
+    border-radius: 20px;
+    position: relative;
+    bottom: 7%;
+    height: fit-content;
+    height: 80%;
+  }
+  
+  .information {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1.5fr 0.3fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "carLogo divider price";
+    grid-area: information;
+  }
+  
+  .carLogo {
+      grid-area: carLogo;
+      
+    }
+  
+  .divider {
+    grid-area: divider;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+  
+  .price {
+    grid-area: price;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+ }
+  
+  .input {
+      grid-area: input;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 25%;
+    font-family: 'Gruppo',cursive;
+    }
+
+.logoImg{
+    height: 50px;
+}
+
+.carLogoImg{
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+}
+
+.dividerStyle{
+    height: 270px;
+    width: 10px;
+}
+
+.carInfoStyle{
+    font-size: 20px;
+    font-family: 'Gruppo', cursive;  
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-left: 20px;
+    margin-right:20px ;
+    
+    
+}
+
+.priceTotal{
+    font-size: 20px;
+    font-family: 'Gruppo', cursive;  
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 13%;
+}
+
+.tbp{
+    font-size: 20px;
+    font-family: 'Gruppo', cursive;  
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 10%;
+}
+
+.inputField{
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+    color: grey;
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 17px;
+    border: solid 1px rgba(255, 255, 255, 0.747);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.textArea{
+    height: 155px;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+    font-size: 15px;
+    color: rgb(90, 90, 90);
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 17px;
+    border: solid 1px rgba(255, 255, 255, 0.747);
+    resize: none;
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.button{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50px;
+    width: 180px;
+    color: rgb(238, 224, 224);
+    background-color: #68fc688c;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    font-family: 'Gruppo',cursive;
+  }
+  
+  .button:hover{
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.labels{
+    font-size: 18px;
+    font-family: 'Gruppo', cursive; 
+    color: white;
+    position: relative;
+    left: 1%;
+   
+}
+
+  

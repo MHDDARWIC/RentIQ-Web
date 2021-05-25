@@ -1,5 +1,6 @@
 import styles from '../Style-Modules/Reserve.module.css';
 import logo from '../assets/rentiq.png';
+import divider from '../assets/divider.png';
 import { useState, useEffect } from 'react';
 import firebase from "firebase";
 import { useGetData } from "../useGetData";
@@ -17,10 +18,10 @@ function Reserve() {
     const [customerName, setCustomerName] = useState("");
     const [customerEmail, setCustomerEmail] = useState("");
     const [customerPhone, setCustomerPhone] = useState("");
-    const [reserverReturnDate, setReserverReturnDate] = useState("");
-    const [reserverReturnTime, setReserverReturnTime] = useState("");
-    const [reserverPickupDate, setReserverPickupDate] = useState("");
-    const [reserverPickupTime, setReserverPickupTime] = useState("");
+    const [reserverReturnDate, setReserverReturnDate] = useState(new Date());
+    const [reserverReturnTime, setReserverReturnTime] = useState(new Date());
+    const [reserverPickupDate, setReserverPickupDate] = useState(new Date());
+    const [reserverPickupTime, setReserverPickupTime] = useState(new Date());
 
 
 
@@ -55,7 +56,7 @@ function Reserve() {
             })
             .then(function () {
                 console.log("Value successfully written!");
-                history.push('/car-selection');
+                history.push("/select-res");
             })
             .catch(function (error) {
                 console.error("Error writing Value: ", error);
@@ -70,6 +71,8 @@ function Reserve() {
             </div>
 
             <div className={styles.form}>
+                <p className={styles.title}>Please enter the reserver's information</p>
+                <img src={divider} alt="divider" className={styles.divider}/>
                 <form onSubmit={handleSubmit}>
                     <label for="customerName" className={styles.labels}>Full Name:</label>
                     <br />
@@ -91,6 +94,7 @@ function Reserve() {
                     <input type="date" id="reserverPickupDate" value={reserverPickupDate} onChange={(e) => setReserverPickupDate(e.target.value)} className={styles.inputFieldDate} required />
                     <input type="time" id="reserverPickupTime" value={reserverPickupTime} onChange={(e) => setReserverPickupTime(e.target.value)} className={styles.inputFieldTime} required />
 
+                    <br />
                     <label for="reserverReturnDate" className={styles.labels}>Car Return Date and Time:</label>
                     <br />
                     <input type="date" id="reserverReturnDate" value={reserverReturnDate} onChange={(e) => setReserverReturnDate(e.target.value)} className={styles.inputFieldDate} required />

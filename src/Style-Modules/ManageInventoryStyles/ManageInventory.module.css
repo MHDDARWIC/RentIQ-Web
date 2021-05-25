@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.4fr 0.5fr 2.9fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". header ."
+      ". buttons ."
+      ". cars ."
+      ". . .";
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo title";
+    grid-area: header;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .logo { grid-area: logo; }
+  
+  .title { grid-area: title; }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bOne bTwo bThree";
+    grid-area: buttons;
+    
+  }
+  
+  .bOne {
+    grid-area: bOne;
+
+  }
+  
+  .bTwo { grid-area: bTwo; }
+  
+  .bThree { grid-area: bThree; }
+  
+  .cars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . .";
+    grid-area: cars;
+    position: relative;
+    bottom: 4%;
+  }
+
+  .titleText{
+      font-size: 30px;
+      color:white;
+      font-family: 'Gruppo', cursive;  
+      position: relative;
+      left:57%;
+      margin:0;
+      width: fit-content;
+  }
+
+  .logoImg{
+    height: 50px;
+  }
+
+  .headerButtons{
+    border-radius: 20px;
+    height: 55px;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    color:white;
+    font-family: 'Gruppo', cursive;  
+    border:none;
+}
+
+.headerButtons:hover{
+  cursor: pointer;
+  background-color: white;
+  font-size: 40px;
+}
+
+  

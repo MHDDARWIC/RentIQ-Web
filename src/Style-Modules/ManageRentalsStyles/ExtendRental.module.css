@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 0.1fr 1.9fr 0.1fr;
+  grid-template-rows: 0.3fr 2.3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". logo ."
+    ". main .";
+}
+
+.logo { grid-area: logo; }
+
+.main {
+  display: grid;
+  background:rgba(255, 255, 255, 0.178);
+  border-radius: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 1.3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "info"
+    "input";
+  grid-area: main;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1.5fr 0.1fr 1.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "carInfo divider priceInfo";
+  grid-area: info;
+}
+
+.carInfo { grid-area: carInfo; }
+
+.divider { grid-area: divider; }
+
+.priceInfo { grid-area: priceInfo; }
+
+.input {
+  grid-area: input;
+  height: fit-content;
+ }
+
+.logoImg{
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carLogoImg{
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dividerStyle{
+    height: 270px;
+    width: 10px;
+}
+
+
+.inputField{
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+    color: grey;
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 17px;
+    border: solid 1px rgba(255, 255, 255, 0.747);
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    font-family: 'Gruppo',cursive;
+}
+
+.button{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+   
+    height: 50px;
+    width: 180px;
+    color: rgb(238, 224, 224);
+    background-color: #00fa9a96;
+    border-radius: 20px;
+    font-size: 18px;
+    border:none;
+    font-family: 'Gruppo',cursive;
+  }
+  
+  .button:hover{
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.labels{
+    font-size: 20px;
+    font-family: 'Gruppo', cursive; 
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    
+}
+
+.priceLabels{
+    font-size: 20px;
+    font-family: 'Gruppo', cursive; 
+    color: white;
+    text-align: center;
+}
+
+.prices{
+  font-size: 40px;
+    font-family: 'Gruppo', cursive; 
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.rentInfo{
+  font-size: 20px;
+    font-family: 'Gruppo', cursive; 
+    color: white;
+    text-align: center;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}

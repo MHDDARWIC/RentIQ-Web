@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.4fr 2.5fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". header ."
+      ". main ."
+      ". . .";
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo title";
+    grid-area: header;
+  }
+  
+  .logo { grid-area: logo; }
+  
+  .title { grid-area: title; }
+  
+  .main {
+    grid-area: main;
+    background:rgba(128, 128, 128, 0.363);
+    border: solid 1px rgba(255, 255, 255, 0.356);
+    border-radius: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
+  .logoImg{
+      height: 50px;
+  }
+
+  .carImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+  }
+
+  .carInformation{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Gruppo',cursive;
+    color: white;
+  }
+
+  .textArea{
+    height: 200px;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+    font-size: 15px;
+    color: rgb(90, 90, 90);
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 17px;
+    border: solid 1px rgba(255, 255, 255, 0.747);
+    resize: none;
+    font-size:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Gruppo',cursive;
+  }
+
+  .button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: #68fc688c;
+    color: white;
+    font-size: 15px;
+    font-family: 'Gruppo',cursive;
+    height: 50px;
+    width: 200px;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: gray;
+  }
+
+  .label{
+    color: white;
+    font-size: 20px;
+    font-family: 'Gruppo',cursive;
+    position: relative;
+    left: 14%;
+
+  }
+
+  .dividerStyle{
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 30px;
+  }
+  

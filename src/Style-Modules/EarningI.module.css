@@ -1,0 +1,80 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 4.9fr 0.1fr;
+    grid-template-rows: 0.1fr 2.8fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". main ."
+      ". . .";
+  }
+  
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.8fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "information"
+      "divider";
+    grid-area: main;
+  }
+  
+  .divider { grid-area: divider; }
+  
+  .information {
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr 0.8fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "date info amount";
+    grid-area: information;
+  }
+  
+  .date {
+    grid-area: date;
+    margin-left: auto;
+    margin-right: auto;
+ }
+  
+  .info {
+      grid-area: info;
+      margin-left: auto;
+    margin-right: auto;
+     }
+  
+  .amount {
+      grid-area: amount;
+      margin-left: auto;
+    margin-right: auto;
+     }
+  
+
+    .amountStyle{
+        font-size: 20px;
+        font-family: 'Gruppo',cursive;
+        color: #68fc68ab;
+    }
+
+    .infoStyle{
+        font-size: 20px;
+        font-family: 'Gruppo',cursive;
+        color: white;
+    }
+
+    .dateStyle{
+        font-size: 20px;
+        font-family: 'Gruppo',cursive;
+        color: white;
+    }
+
+    .hrLine{
+        width: 650px;
+        color: rgba(255, 255, 255, 0.26);
+        
+    }
+  
+
+  
+  

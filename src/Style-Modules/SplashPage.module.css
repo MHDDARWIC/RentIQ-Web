@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+.gridContainer {
+    display: grid;
+    background-image: url('../assets/background1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.4fr 2.4fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". header ."
+      ". main ."
+      ". footer .";
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo info";
+    grid-area: header;
+  }
+  
+  .logo { grid-area: logo; }
+  
+  .info {
+    grid-area: info;
+ }
+  
+  .footer { grid-area: footer; }
+  
+  .main {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      grid-area: main;
+      background:url('../assets/splash.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      height: 600px;
+      width: 1300px;
+     }
+
+  .logoImg{
+      height: 50px;
+  }
+  
+  .choice{
+      height: 500px;
+      width: 500px;
+      background:rgba(255, 255, 255, 0.356);
+      border-radius: 20px;
+      position: relative;
+      left: 60%;
+      top: 8%;
+  }
+
+  .buttons{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      height: 80px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      border:solid 0px;
+      font-family: 'Gruppo', cursive; 
+  }
+
+  .buttons:hover{
+      background-color: white;
+      color: grey;
+      cursor: pointer;
+  }
+
+  .infoText{
+    font-size: 20px;
+    font-family: 'Gruppo', cursive; 
+    color: rgb(43, 40, 40);
+    text-align: center;
+
+  }

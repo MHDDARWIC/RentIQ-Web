@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+.num{
+    font-size: 30px;
+    color: white;
+    font-family: 'Gruppo',cursive;
+    height: fit-content;
+    text-align: center;
+}

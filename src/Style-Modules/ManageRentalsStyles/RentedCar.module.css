@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 2fr 0.1fr;
+    grid-template-rows: 0.1fr 2.8fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". car ."
+      ". . .";
+  }
+  
+  .car {
+    display: grid;
+    grid-template-columns: 1fr;
+    background:rgba(128, 128, 128, 0.363);
+  border: solid 1px rgba(255, 255, 255, 0.356);
+  border-radius: 20px;
+  
+    height: fit-content;
+    margin-top: 2%;
+    grid-template-rows: 0.4fr 2.3fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "title"
+      "details"
+      "button";
+    grid-area: car;
+  }
+  
+  .title {
+    grid-area: title;
+ }
+  
+  .button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "extend close";
+    grid-area: button;
+  }
+  
+  .extend {
+    grid-area: extend;
+ }
+  
+  .close {
+    grid-area: close;
+ }
+  
+  .details {
+    display: grid;
+    grid-template-columns: 1.2fr 0.2fr 1.6fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "carLogo divider renterInfo";
+    grid-area: details;
+  }
+  
+  .carLogo {
+      grid-area: carLogo;
+    }
+  
+  .divider {
+      grid-area: divider;
+    }
+  
+  .renterInfo {
+      grid-area: renterInfo;
+    }
+  
+.carImg{
+  height:120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  top: 10%;
+}
+
+.extendButton{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #66ffa877;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  width: 85%;
+  height: 35px;
+  font-family: 'Gruppo', cursive;  
+}
+
+
+
+.extendButton:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.closeButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ff40369f ;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    width: 85%;
+    height: 35px;
+    font-family: 'Gruppo', cursive;  
+    margin-bottom: 5%;
+  }
+  
+  .closeButton:hover{
+    background-color: white;
+    color: #ff40369f;
+    cursor: pointer;
+    font-size: 18px;
+
+  }
+
+.renterDetails{
+  font-size: 20x;
+  color: white;
+  font-family: 'Gruppo', cursive;  
+  margin:8px;
+}
+
+.divider{
+  position: relative;
+  bottom: 5%;
+  height: 230px;
+  width: 10px;
+}
+
+.title{
+  font-size: 28px;
+  text-align: center;
+  font-family: 'Gruppo', cursive;
+  color: white;
+}

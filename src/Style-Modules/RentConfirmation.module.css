@@ -1,63 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
 .gridContainer {
-    display: grid;
-    background-image: url('../assets/background1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-template-columns: 0.1fr 1.9fr 0.1fr;
-    grid-template-rows: 0.5fr 2.2fr 0.3fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". logo ."
-      ". confirmation ."
-      ". . .";
-  }
-  
-  .logo {
-      grid-area: logo;
-    }
-  
-  .confirmation {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "pOne pTwo";
-    grid-area: confirmation;
-  }
-  
-  .pOne {
-    grid-area: pOne;
+  display: grid;
+ 
+  grid-template-columns: 0.1fr 2.9fr 0.1fr;
+  grid-template-rows: 0.4fr 2.5fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". logo ."
+    ". confirm ."
+    ". . .";
+}
+
+.logo {
+  grid-area: logo;
  }
+
+.confirm {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1.4fr 0.2fr 1.4fr;
+  grid-template-rows: 1fr;
+  background:rgba(128, 128, 128, 0.363);
+  border: solid 1px rgba(255, 255, 255, 0.356);
+  border-radius: 20px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "carInfo divider rentalInfo";
+  grid-area: confirm;
+  width: fit-content;
   
-  .pTwo {
-      grid-area: pTwo;
-    }
+}
 
-    .logoImg{
-        height: 50px;
-    }
+.divider { 
+  grid-area: divider;
+ }
 
-    .button{
-        display: block;
-        margin-left: auto;
-        margin-right:auto ;
-        height: 40px;
-        width: 130px;
-        color: rgb(238, 224, 224);
-        background-color: #7AEB68;
-        border-radius: 10%;
-        font-size: 20px;
-      }
-      
-      .button:hover{
-        background-color: white;
-        color: grey;
-        cursor: pointer;
-        font-size: 20px;
-      }
+.carInfo { 
+  grid-area: carInfo;
+ }
 
-      .carImg{
-          height:150px;
-      }
+.rentalInfo {
+  grid-area: rentalInfo;
+  background-image: url('../assets/gradient.jpg');
+  opacity: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  height: 500px;
+  margin-bottom: 18.1%;
+  width: 500px;
+  position: relative;
+  right: 5%;
+  top: 7%;
+  
+ }
+
+
+.logoImg{
+  height: 50px;
+}
+
+.button{
+    display: block;
+    margin-left: auto;
+    margin-right:auto ;
+    height: 40px;
+    width: 200px;
+    color: rgb(238, 224, 224);
+    background-color: rgba(21, 188, 230, 0.733);
+    border-radius: 20px;
+    font-size: 20px;
+    border: solid 1px rgba(21, 188, 230, 0.733);
+  }
+  
+  .button:hover{
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .carImg{
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height:250px;
+    margin-bottom: 30px;
+
+  }
+
+  .renterdata{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Gruppo', cursive;
+  }
+
+  .cardata{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Gruppo', cursive;
+    margin: 0;
+  }
+
+  .priceData{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Gruppo', cursive;
+  }
+
+  .daysData{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Gruppo', cursive;
+  }
+
+  .divider{
+    height: 600px;
+    width: 20px;
+  }
+
+  
   

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.4fr 2.4fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". header ."
+      ". cars ."
+      ". . .";
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo title";
+    grid-area: header;
+  }
+  
+  .logo { grid-area: logo; }
+  
+  .title { grid-area: title; }
+  
+  .cars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . .";
+    grid-area: cars;
+  }
+
+  .titleText{
+    font-size: 30px;
+    color:white;
+    font-family: 'Gruppo', cursive;  
+    margin:0;
+}
+
+    .logoImg{
+    height: 50px;
+    margin-bottom: 20px;
+    }
+
+    .dividerStyle{
+      width: 350px;
+      position: relative;
+      right: 70px;
+    }
+  

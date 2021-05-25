@@ -7,7 +7,6 @@ import { useAuth } from '../context/AuthContext';
 import Car from './Car';
 
 function CarSelection() {
-
     const { currentUser } = useAuth();
     const [documents] = useGetData();
     const [currentDoc, setCurrentDoc] = useState("");
@@ -23,6 +22,7 @@ function CarSelection() {
                 setLoading(false);
                 setCurrentDoc(documents[j]);
                 setCars(documents[j].value.cars); //get the cars of the business
+                break;
             } else {
                 setLoading(true);
             }
@@ -34,19 +34,17 @@ function CarSelection() {
             <p>Loading...</p>
         </div>
     ) : (
-
         <div className={styles.gridContainer}>
             <div className={styles.logo}>
                 <img src={logo} className={styles.logoImg} alt="rentiq logo" />
+                <p className={styles.titleStyle}>Select a car:</p>
             </div>
 
             <div className={styles.results}>
-                {cars.map((car) => ( //for each person in people, do the following
+                {cars.map((car) => (car.isRented==false && car.isReserved==false && car.needMaintenance==false && car.available==true) ? (
                     <Car car={car} />
-                ))}
-
+                ): (console.log('removed')))}
             </div>
-
         </div>
     )
 }

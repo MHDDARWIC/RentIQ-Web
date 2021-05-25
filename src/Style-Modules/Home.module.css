@@ -1,65 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
 .gridContainer {
-    display: grid;
-    background-image: url('../assets/background1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-template-columns: 0.1fr 2.9fr 0.9fr 0.1fr;
-    grid-template-rows: 0.5fr 1.5fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". logo info ."
-      ". dashboard reservations ."
-      ". menu returns .";
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "main";
+}
 
-  
-  .dashboard {
-      grid-area: dashboard;
-      height: 430px;
-      background-color: grey;
-      margin-top: -2%;
-      width: 980px;
-    }
-  .menu { 
-    grid-area: menu;
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo . account";
+  grid-area: header;
+}
+
+.logo { grid-area: logo; }
+
+.account {
+  grid-area: account;
+  justify-self: end;
  }
-  .reservations { 
-      grid-area: reservations;
-      height: 300px;
-      background-color: grey;
-    }
-  .returns {
-      grid-area: returns;
-      height: 100px;
-      background-color: grey;
-    }
-  .info { 
-      grid-area: info;
-      height: fit-content;
-    }
 
-    .logo { 
-        grid-area: logo;
-        height: fit-content;
-    }
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "pOne pTwo";
+  grid-area: main;
+}
+
+.pOne {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "bar"
+    "buttons";
+  grid-area: pOne;
+}
+
+.bar {
+  grid-area: bar;
+  justify-self: center;
+  background-color: rgba(255, 255, 255, 0.123);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  
+ }
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+  grid-area: buttons;
+  height: fit-content;
+  position: relative;
+  top: 15px;
+ 
+
+}
+
+.pTwo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "wheelOne"
+    "wheelTwo"
+    "wheelThree";
+  grid-area: pTwo;
+  height: fit-content;
+}
+
+.wheelOne {
+  grid-area: wheelOne;
+  height: fit-content;
+  margin-bottom: 20px;
+ }
+
+.wheelTwo {
+  grid-area: wheelTwo;
+  height: fit-content;
+  margin-bottom: 20px;
+ }
+
+.wheelThree {
+  grid-area: wheelThree;
+  height: fit-content;
+  margin-bottom: 20px;
+ }
 
 .logoImg{
     height: 50px;
+    position: relative;
+    left: 15px;
+    top: 15px;
 }
 
 .menuButtons{
     height: 70px;
-    width: 310px;
+    width: 350px;
     font-size: 20px;
-    margin-right: 25px;
-    margin-top: 1%;
-    background-color: #7aeb68a2;
+    background-color: #00fa9a96;
     color: white;
+    border-radius: 20px;
+    border:solid 1px #00fa9a96 ;
+    font-family: 'Gruppo',cursive;
+   margin-bottom: 15px;
+   font-size: 25px;
 }
 
 .menuButtons:hover{
     background-color: white;
-    color: #7aeb68a2;
+    color: grey;
     cursor: pointer;
+    font-size: 30px;
+}
+
+.sides{
+  font-size: 20px;
+  color: white;
+  font-family: 'Gruppo', cursive;
+  text-align: center;
+}
+
+
+.doughnutGraph{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 250px;
+  margin-bottom: 60px;
+}
+
+.doughnutTitle{
+  text-align: center;
+  color: white;
+  font-family: 'Gruppo',cursive;
+  position: relative;
+  top: 70%;
+  margin:0;
+}
+
+.accountInfo{
+  color: white;
+  font-size: 40px;
+  font-family: 'Gruppo',cursive;
+  margin:0;
 
 }
+
+.signOutButton{
+  border-radius: 50%;
+  height: 30px;
+  justify-self: end;
+  border:none;
+  background-color: #00fa9a96;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.signOutButton:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #00fa9a96;
+}
+
+.carTitlePopularity{
+  text-align: center;
+  color: white;
+  font-family: 'Gruppo',cursive;
+  font-size: 25px;
+}
+
+
+
+
+
+
+

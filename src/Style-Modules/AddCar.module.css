@@ -1,60 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
 .gridContainer {
-    display: grid;
-    background-image: url('../assets/background1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-template-columns: 0.1fr 2fr 0.1fr;
-    grid-template-rows: 0.4fr 3fr 0.1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". logo ."
-      ". form ."
-      ". . .";
-  }
-  
-  .logo {
-      grid-area: logo;
-    }
-  
-  .form {
-    display: grid;
-    grid-template-columns: 1.5fr 0.1fr 1.5fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "search . results";
-    grid-area: form;
-  }
-  
-  .search {
-    grid-area: search;
- }
-  
-  .results {
-      grid-area: results;
+  display: grid;
+  grid-template-columns: 0.1fr 1.9fr 0.1fr;
+  grid-template-rows: 0.3fr 0.4fr 3.2fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". logo ."
+    ". title ."
+    ". form ."
+    ". . .";
 }
+
+.logo { grid-area: logo; }
+
+.title {
+  grid-area: title;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+.form {
+  display: grid;
+  grid-template-columns: 1.4fr 0.2fr 1.4fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "input divider results";
+  grid-area: form;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background:rgba(128, 128, 128, 0.363);
+  border: solid 1px rgba(255, 255, 255, 0.356);
+  border-radius: 20px;
+  position: relative;
+  bottom: 5%;
+}
+
+.input { grid-area: input; }
+
+.divider { grid-area: divider; }
+
+.results {
+  grid-area: results;
+  position: relative;
+  right: 2%;
+ }
 
 .logoImg{
     height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inputField{
-    display: block;
-    margin-left: auto;
-    margin-right:auto ;
-    height: 40px;
-    width: 400px;
-    font-size: 15px;
-    color: rgb(90, 90, 90);
-    background-color: rgba(255, 255, 255, 0.555);
-    margin-top:-2%;
+  display: block;
+  margin-left: auto;
+  margin-right:auto ;
+  height: 50px;
+  width: 400px;
+  font-size: 20px;
+  color: grey;
+  background-color: rgba(255, 255, 255, 0.747);
+  border-radius: 17px;
+  border: solid 1px rgba(255, 255, 255, 0.747);
+  position: relative;
+  bottom: 8px;
+  margin-bottom: 5px;
   }
   
   .labels{
     display: block;
     position: relative;
-    left: 19%;
+    left: 12%;
     color: rgb(238, 224, 224);
+    font-family: 'Gruppo',cursive;
+    font-size: 20px;
   }
 
   .button{
@@ -64,9 +88,11 @@
     height: 40px;
     width: 130px;
     color: rgb(238, 224, 224);
-    background-color: #7AEB68;
-    border-radius: 10%;
+    background-color: #68fc688c;
+    border-radius: 20px;
+    border:none;
     font-size: 20px;
+    margin-top: 15px;
   }
   
   .button:hover{
@@ -74,5 +100,44 @@
     color: grey;
     cursor: pointer;
     font-size: 20px;
+  }
+
+  .titleStyle{
+    font-size: 30px;
+    font-family: 'Gruppo',cursive;
+    color: white;
+    position: relative;
+    text-align: center;
+  }
+
+  .dividerStyle{
+    width: 530px;
+    position: relative;
+    bottom: 25%;
+  }
+
+  .dividerVer{
+    height: 620px;
+    width: 10px;
+    position: relative;
+    bottom: 3%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carImg{
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carInfo{
+    font-family: 'Gruppo',cursive;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 0;
   }
   

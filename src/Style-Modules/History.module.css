@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+body{
+    /* background-image: url('../assets/background1.jpg'); */
+    background-image: url('../assets/background2.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.4fr 2.5fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". header ."
+    ". main ."
+    ". . .";
+    }
+  
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    margin-left: auto;
+    margin-right: auto;
+    background:rgba(255, 255, 255, 0.356);
+    border-radius: 20px;
+}
+
+.logoImg{
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.titleStyle{
+    font-size: 30px;
+    font-family:'Gruppo',cursive;
+    color: white;
+    text-align: center;
+}
+
+.hrLine{
+    width: 400px;
+    color: rgba(255, 255, 255, 0.26);
+    
+}
+
+
+
+
+
+
+  

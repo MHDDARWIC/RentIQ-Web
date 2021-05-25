@@ -28,27 +28,21 @@ function SignIn() {
     return (
         <div className={styles.gridContainer}>
             <div className={styles.logo}>
-                <img src={logo} alt="the rentiq logo" className={styles.logoImg} />
-            </div>
 
+            </div>
+            <img src={logo} alt="the rentiq logo" className={styles.logoImg} />
             <div className={styles.form}>
-                <h3 className={styles.title}>Welcome to RentIQ !</h3>
+                <p className={styles.title}>Welcome Back!</p>
+                <p className={styles.title} style={{fontSize:'20px',color:'grey'}}>Please sign in below</p>
                 <br/>
                 <form onSubmit={handleSubmit}>
                     <label for="email" className={styles.labels}>Email:</label>
-                    <br/>
                     <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} className={styles.inputField} required />
 
                     <br/>
 
                     <label for="password" className={styles.labels}>Password:</label>
-                    
-                    <br/>
                     <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} className={styles.inputField} required />
-
-                    <br/>
-                    <p className={styles.passLength}>Passwords must contain at least 8 characters</p>
-                    <br/>
 
                     <button type="submit" className={styles.button}>Sign In</button>
 
@@ -57,12 +51,9 @@ function SignIn() {
 
                 <div className={styles.linkDiv}>
                     <Link className={styles.link} to="/sign-up">Don't have an acount? Sign up here!</Link>
-                </div>
-
-                <div className={styles.linkDiv}>
+                    <br/>
                     <Link className={styles.link} to="/forgot-password">Forgot Password? </Link>
                 </div>
-
                 <p className={styles.errorMessage}>{errorMessage}</p>
 
             </div>

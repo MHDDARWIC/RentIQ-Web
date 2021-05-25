@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 2fr 0.1fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". header ."
+      ". main .";
+  }
+  
+  .header { grid-area: header; }
+  
+  .main {
+    grid-area: main;
+    background:rgba(255, 255, 255, 0.356);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    
+    border-radius: 20px;
+
+}
+
+  .logoImg{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 50px;
+     
+  }
+
+  .warning{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    margin-top: 30px;
+  }
+
+  .pStyle{
+      font-size: 30px;
+      font-family: 'Gruppo',cursive;
+      text-align: center;
+      margin-left: 10px;
+      margin-right: 10px;
+      color: white;
+  }
+
+  .button{
+    background-color: tomato;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-family: 'Gruppo',cursive;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid tomato;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .button:hover{
+    background-color: white;
+    border:1px solid white;
+    color: tomato;
+    cursor: pointer;
+    
+
+  }
+
+  

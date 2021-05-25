@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 0.1fr 2.8fr 0.1fr;
+  grid-template-rows: 0.1fr 2.8fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". car ."
+    ". . .";
+}
+
+.car {
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.144);
+  border-radius: 20px;
+  border: solid 1px white;
+  height: fit-content;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 2.3fr 0.3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title"
+    "details"
+    "button";
+  grid-area: car;
+  margin-top: 2%;
+}
+
+.title { grid-area: title; }
+
+.button { grid-area: button; }
+
+.details {
+  display: grid;
+  grid-template-columns: 1.2fr 0.2fr 1.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "carLogo divider carInfo";
+  grid-area: details;
+}
+
+.carLogo {
+  grid-area: carLogo;
+ }
+
+.divider {
+  grid-area: divider;
+ }
+
+.carInfo {
+  grid-area: carInfo;
+ }
+
+.carImg{
+  height:120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  top: 10%;
+}
+
+.selectButton{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #7aeb68c7;
+  border-radius: 10px;
+  font-size: 18px;
+  border: solid 1px #7aeb68c7 ;
+  color: white;
+  width: 45%;
+  height: 35px;
+  margin-top: -5%;
+}
+
+.selectButton:hover{
+  background-color: white;
+  color: grey;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.carDetails{
+  font-size: 20x;
+  color: white;
+  font-family: 'Gruppo', cursive;  
+}
+
+.divider{
+  position: relative;
+  bottom: 5%;
+  height: 230px;
+  width: 10px;
+}
+
+.title{
+  font-size: 28px;
+  text-align: center;
+  font-family: 'Gruppo', cursive;
+  color: white;
+  
+}

@@ -1,0 +1,93 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr 0.1fr;
+    grid-template-rows: 0.1fr 2.8fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". car ."
+      ". . .";
+  }
+  
+  .car {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.144);
+    border-radius: 20px;
+    border: solid 1px white;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 2.4fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "title"
+      "main"
+      "button";
+    grid-area: car;
+  }
+  
+  .title { grid-area: title; }
+  
+  .main {
+    display: grid;
+    grid-template-columns: 1.2fr 0.2fr 1.6fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . .";
+    grid-area: main;
+  }
+  
+  .button { grid-area: button; }
+
+  .carImg{
+    height:120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .dividerStyle{
+    position: relative;
+    bottom: 5%;
+    height: 230px;
+    width: 10px;
+  }
+
+  .titleStyle{
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Gruppo', cursive;
+    color: white;
+  }
+
+  .carInformation{
+    font-size: 20x;
+    color: white;
+    font-family: 'Gruppo', cursive;  
+  }
+
+  .buttonStyle{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      width: 200px;
+      height: 40px;
+      background-color: #ff40369f;
+      font-size: 15px;
+      position: relative;
+      bottom: 40%;
+      font-family: 'Gruppo', cursive; 
+  }
+
+  .buttonStyle:hover{
+      background-color: white;
+      color: grey;
+      cursor: pointer;
+   
+}
+  
