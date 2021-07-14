@@ -69,14 +69,15 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #7aeb68c7;
+  background-color: #00fa9a96;
   border-radius: 10px;
   font-size: 18px;
-  border: solid 1px #7aeb68c7 ;
+  border: solid 1px #00fa9a96 ;
   color: white;
   width: 45%;
   height: 35px;
   margin-top: -5%;
+  font-family: 'Gruppo',cursive;
 }
 
 .selectButton:hover{

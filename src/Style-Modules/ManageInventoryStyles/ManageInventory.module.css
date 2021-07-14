@@ -20,7 +20,8 @@
       "logo title";
     grid-area: header;
     margin-top: 10px;
-    margin-bottom: 30px;
+    height: fit-content;
+    
   }
   
   .logo { grid-area: logo; }
@@ -35,17 +36,19 @@
     grid-template-areas:
       "bOne bTwo bThree";
     grid-area: buttons;
-    
+    height: fit-content;
+    margin-top: 40px;
+  
   }
   
   .bOne {
     grid-area: bOne;
-
+    height: fit-content;
   }
   
-  .bTwo { grid-area: bTwo; }
+  .bTwo { grid-area: bTwo; height: fit-content; }
   
-  .bThree { grid-area: bThree; }
+  .bThree { grid-area: bThree; height: fit-content; }
   
   .cars {
     display: grid;
@@ -55,8 +58,8 @@
     grid-template-areas:
       ". . .";
     grid-area: cars;
-    position: relative;
-    bottom: 4%;
+    height: fit-content;
+    
   }
 
   .titleText{
@@ -67,6 +70,7 @@
       left:57%;
       margin:0;
       width: fit-content;
+      height: fit-content;
   }
 
   .logoImg{
@@ -84,12 +88,14 @@
     color:white;
     font-family: 'Gruppo', cursive;  
     border:none;
+  
 }
 
 .headerButtons:hover{
   cursor: pointer;
-  background-color: white;
   font-size: 40px;
+  transition: 0.6s;
+  
 }
 
   

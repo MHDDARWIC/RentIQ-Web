@@ -141,6 +141,7 @@
     border: solid 1px rgba(255, 255, 255, 0.747);
     margin-top: 10px;
     margin-bottom: 20px;
+    font-family: 'Gruppo',cursive;
 }
 
 .textArea{
@@ -158,6 +159,7 @@
     font-size:20px;
     margin-top: 10px;
     margin-bottom: 20px;
+    font-family: 'Gruppo',cursive;
 }
 
 .button{

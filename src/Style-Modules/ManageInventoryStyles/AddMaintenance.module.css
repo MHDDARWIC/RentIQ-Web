@@ -21,7 +21,7 @@
     grid-area: header;
   }
   
-  .logo { grid-area: logo; }
+  .logo { grid-area: logo;  }
   
   .title { grid-area: title; }
   

@@ -34,6 +34,7 @@ function AllInfo() {
                     setLoading(true);
                 } else {
                     setLoading(false);
+                    break;
                 }
             } else {
                 setLoading(true);

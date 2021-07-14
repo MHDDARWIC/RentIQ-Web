@@ -23,6 +23,7 @@ function Home() {
     const [rentedCarsNum, setRentedCarsNum] = useState();
     const [maintenanceNum, setMaintenanceNum] = useState();
     const [reservedCarsNum, setReservedCarsNum] = useState();
+    
 
     var chartData = {
         labels: finalLabels,
@@ -178,21 +179,21 @@ function Home() {
                 <div className={styles.pTwo}>
                     <div className={styles.wheelOne}>
                         <div className={styles.doughnutGraph}>
-                            <p className={styles.doughnutTitle}>Rented: {(rentedCarsNum / finalLabels.length) * 100}%</p>
+                            <p className={styles.doughnutTitle}>Rented: {Math.floor((rentedCarsNum / finalLabels.length) * 100)}%</p>
                             <Doughnut data={doughnutDataR} options={{ responsive: true, maintainAspectRatio: true, }} />
                         </div>
                     </div>
 
                     <div className={styles.wheelTwo}>
                         <div className={styles.doughnutGraph}>
-                            <p className={styles.doughnutTitle}>Maintenance: {(maintenanceNum / finalLabels.length) * 100}%</p>
+                            <p className={styles.doughnutTitle}>Maintenance: {Math.floor((maintenanceNum / finalLabels.length) * 100)}%</p>
                             <Doughnut data={doughnutDataM} options={{ responsive: true, maintainAspectRatio: true, }} />
                         </div>
                     </div>
 
                     <div className={styles.wheelThree}>
                         <div className={styles.doughnutGraph}>
-                            <p className={styles.doughnutTitle}>Reserved: {(reservedCarsNum / finalLabels.length) * 100}%</p>
+                            <p className={styles.doughnutTitle}>Reserved: {Math.floor((reservedCarsNum / finalLabels.length) * 100)}%</p>
                             <Doughnut data={doughnutDataRes} options={{ responsive: true, maintainAspectRatio: true, }} />
                         </div>
                     </div>

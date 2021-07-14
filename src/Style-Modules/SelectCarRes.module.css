@@ -25,6 +25,7 @@
     grid-area: results;
     position: relative;
     bottom: 7%;
+    height: fit-content;
   }
   
 
@@ -36,8 +37,10 @@
 }
 
 .title{
-    font-size: 25px;
+    font-size: 35px;
     font-family: 'Gruppo', cursive; 
     color: white;
+    position: relative;
+    left: 20px;
   
 }

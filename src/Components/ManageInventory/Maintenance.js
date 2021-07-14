@@ -39,18 +39,21 @@ function Maintenance(){
         </div>
     ) : (
         <div className={styles.gridContainer}>
+            
             <div className={styles.header}>
                 <div className={styles.logo}>
-                    <img src={logo} className={styles.logoImg} alt="rentiq logo" />
-                    <p className={styles.titleText}>Maintenance</p>
-                    <img src={divider} className={styles.dividerStyle} alt="a horizontal divider"/>
+                    <img src={logo} className={styles.logoImg} alt="rentiq logo" onClick={() => { history.push('/') }} />
+                <p className={styles.titleText}>Maintenance</p>
+                    
                 </div>
+                
 
                 <div className={styles.title}>
                 </div>
             </div>
 
             <div className={styles.cars}>
+                
                 {cars.map((car) => (car.needMaintenance==true) ? (
                         <MaintenanceCar car={car} />
                     ) : (console.log('removed')))}

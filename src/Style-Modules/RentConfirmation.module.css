@@ -14,6 +14,7 @@
 
 .logo {
   grid-area: logo;
+  justify-self: center;
  }
 
 .confirm {
@@ -73,6 +74,7 @@
     border-radius: 20px;
     font-size: 20px;
     border: solid 1px rgba(21, 188, 230, 0.733);
+    font-family: 'Gruppo',cursive;
   }
   
   .button:hover{

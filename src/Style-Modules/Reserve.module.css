@@ -11,6 +11,8 @@
   
   .logo {
     grid-area: logo;
+    justify-self: center;
+    
  }
   
   .form {
@@ -120,5 +122,6 @@
 
 .logoImg{
   height: 50px;
+  margin-bottom: 80px;
 }
   

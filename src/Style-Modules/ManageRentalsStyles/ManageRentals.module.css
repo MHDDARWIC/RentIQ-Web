@@ -37,5 +37,7 @@
   font-size: 30px;
   font-family: 'Gruppo', cursive;  
   color: white;
+  position: relative;
+  left: 20px;
 
 }

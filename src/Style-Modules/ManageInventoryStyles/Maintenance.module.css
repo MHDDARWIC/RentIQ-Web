@@ -36,10 +36,13 @@
   }
 
   .titleText{
-    font-size: 30px;
+    font-size: 35px;
     color:white;
     font-family: 'Gruppo', cursive;  
-    margin:0;
+    margin:10px;
+    position: relative;
+    left: 20px;
+    
 }
 
     .logoImg{

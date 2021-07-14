@@ -70,6 +70,7 @@
   position: relative;
   bottom: 8px;
   margin-bottom: 5px;
+  font-family: 'Gruppo',cursive;
   }
   
   .labels{
@@ -93,6 +94,7 @@
     border:none;
     font-size: 20px;
     margin-top: 15px;
+    font-family: 'Gruppo',cursive;
   }
   
   .button:hover{

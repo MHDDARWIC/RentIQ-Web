@@ -19,6 +19,7 @@ function CarRes(props) {
         for (var j = 0; j < documents.length; j++) {
             if (documents[j].value.email === currentUser.email) {
                 setCurrentDoc(documents[j]);
+                break;
             }
         }
     })

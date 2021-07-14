@@ -13,6 +13,7 @@
   
   .logo {
       grid-area: logo;
+      justify-self: center;
     }
   
   .success {

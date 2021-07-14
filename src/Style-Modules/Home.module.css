@@ -70,6 +70,7 @@
   height: fit-content;
   position: relative;
   top: 15px;
+  justify-self: center;
  
 
 }
@@ -85,30 +86,34 @@
     "wheelThree";
   grid-area: pTwo;
   height: fit-content;
+  justify-self: center;
 }
 
 .wheelOne {
   grid-area: wheelOne;
   height: fit-content;
   margin-bottom: 20px;
+  
  }
 
 .wheelTwo {
   grid-area: wheelTwo;
   height: fit-content;
   margin-bottom: 20px;
+  
  }
 
 .wheelThree {
   grid-area: wheelThree;
   height: fit-content;
   margin-bottom: 20px;
+  justify-self: center;
  }
 
 .logoImg{
     height: 50px;
     position: relative;
-    left: 15px;
+    left: 35px;
     top: 15px;
 }
 
@@ -119,10 +124,14 @@
     background-color: #00fa9a96;
     color: white;
     border-radius: 20px;
-    border:solid 1px #00fa9a96 ;
+    border:none;
     font-family: 'Gruppo',cursive;
-   margin-bottom: 15px;
-   font-size: 25px;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+   
 }
 
 .menuButtons:hover{
@@ -130,6 +139,8 @@
     color: grey;
     cursor: pointer;
     font-size: 30px;
+    transition: 0.6s;
+    
 }
 
 .sides{
@@ -169,6 +180,7 @@
 .signOutButton{
   border-radius: 50%;
   height: 30px;
+  width: 40px;
   justify-self: end;
   border:none;
   background-color: #00fa9a96;

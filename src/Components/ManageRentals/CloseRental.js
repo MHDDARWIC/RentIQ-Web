@@ -39,6 +39,7 @@ function CloseRental(){
                     setLoading(true);
                 } else {
                     setLoading(false);
+                    break;
                 }
 
             } else {

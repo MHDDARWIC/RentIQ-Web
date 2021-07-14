@@ -35,6 +35,7 @@ function Rent() {
             if (documents[j].value.email === currentUser.email) {
                 setCurrentDoc(documents[j]);
                 setDnl(documents[j].value.doNotRentList);
+                break;
             }
         }
     });

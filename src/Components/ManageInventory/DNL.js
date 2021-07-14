@@ -26,7 +26,8 @@ function DNL() {
             if (documents[j].value.email === currentUser.email) {
                 setLoading(false);
                 setCurrentDoc(documents[j]);
-                setList(documents[j].value.doNotRentList)
+                setList(documents[j].value.doNotRentList);
+                break;
             } else {
                 setLoading(true);
             }

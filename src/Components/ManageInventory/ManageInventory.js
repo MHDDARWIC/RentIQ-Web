@@ -40,7 +40,7 @@ function ManageInventory() {
         <div className={styles.gridContainer}>
             <div className={styles.header}>
                 <div className={styles.logo}>
-                    <img src={logo} className={styles.logoImg} alt="rentiq logo" />
+                    <img src={logo} className={styles.logoImg} alt="rentiq logo" onClick={() => { history.push('/') }}/>
                 </div>
 
                 <div className={styles.title}>

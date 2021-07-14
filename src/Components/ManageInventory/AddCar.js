@@ -159,17 +159,17 @@ function AddCar() {
 
                             <label for="mileage" className={styles.labels}>Mileage:</label>
                             <br />
-                            <input style={{ backgroundColor: 'rgba(255, 255, 255, 0.233)', border: 'none' }} disabled type="text" id="mileage" value={mileage} onChange={(e) => setMileage(e.target.value)} className={styles.inputField} />
+                            <input style={{ backgroundColor: 'rgba(255, 255, 255, 0.233)', border: 'none' }} disabled type="text" id="mileage" value={mileage} onChange={(e) => setMileage(e.target.value)} className={styles.inputField} required />
 
 
                             <label for="rate" className={styles.labels}>Daily Rate:</label>
                             <br />
-                            <input style={{ backgroundColor: 'rgba(255, 255, 255, 0.233)', border: 'none' }} disabled type="text" id="rate" value={rate} onChange={(e) => setRate(e.target.value)} className={styles.inputField} />
+                            <input style={{ backgroundColor: 'rgba(255, 255, 255, 0.233)', border: 'none' }} disabled type="text" id="rate" value={rate} onChange={(e) => setRate(e.target.value)} className={styles.inputField} required/>
 
 
                             <label for="color" className={styles.labels}>Car Color:</label>
                             <br />
-                            <input style={{ backgroundColor: 'rgba(255, 255, 255, 0.233)', border: 'none' }} disabled type="text" id="color" value={color} onChange={(e) => setColor(e.target.value)} className={styles.inputField} />
+                            <input style={{ backgroundColor: 'rgba(255, 255, 255, 0.233)', border: 'none' }} disabled type="text" id="color" value={color} onChange={(e) => setColor(e.target.value)} className={styles.inputField} required />
 
                             <button type="submit" className={styles.button}>Search</button>
                             

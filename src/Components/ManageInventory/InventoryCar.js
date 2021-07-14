@@ -25,6 +25,7 @@ function InventoryCar(props) {
             if (documents[j].value.email === currentUser.email) {
                 setCurrentDoc(documents[j]);
                 setCars(documents[j].value.cars);
+                break;
             }
         }
     })
