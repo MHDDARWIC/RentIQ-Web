@@ -3,7 +3,7 @@
 .gridContainer {
     display: grid;
     grid-template-columns: 0.1fr 1.9fr 0.1fr;
-    grid-template-rows: 0.4fr 0.3fr 3.2fr 0.1fr;
+    grid-auto-rows: minmax(min-content,max-content);
     gap: 0px 0px;
     grid-template-areas:
       ". logo ."
@@ -16,9 +16,7 @@
   
   .title {
       grid-area: title;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      justify-self: center;
      }
   
   .main {
@@ -26,24 +24,20 @@
     background:rgba(128, 128, 128, 0.363);
     border: solid 1px rgba(255, 255, 255, 0.356);
     border-radius: 20px;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
     grid-template-columns: 0.1fr 2.8fr 0.1fr;
-    grid-template-rows: 0.1fr 0.6fr 3.2fr 0.1fr;
-    gap: 0px 0px;
+    grid-auto-rows: minmax(min-content,max-content);
+    gap: 15px 0px;
     grid-template-areas:
       ". . ."
       ". add ."
       ". results ."
       ". . .";
     grid-area: main;
+    justify-self: center;
   }
   
   .add {
       grid-area: add;
-      margin-left: auto;
-      margin-right: auto;
      }
   
   .results {
@@ -70,8 +64,6 @@
 
   .input{
     display: inline;
-    margin-left: auto;
-    margin-right:auto ;
     height: 50px;
     width: 400px;
     font-size: 20px;
@@ -98,10 +90,3 @@
     color: grey;
     cursor: pointer;
   }
-
-  .dividerStyle{
-      width: 350px;
-      position: relative;
-      bottom: 25%;
-  }
-  

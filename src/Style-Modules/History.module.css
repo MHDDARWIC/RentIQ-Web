@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Poiret+One&family=Saira+Semi+Condensed:wght@300&display=swap');
 
 body{
-    /* background-image: url('../assets/background1.jpg'); */
     background-image: url('../assets/background2.jpg');
     background-size: cover;
     background-repeat:no-repeat;
 }
+
 .gridContainer {
     display: grid;
     grid-template-columns: 0.1fr 1.9fr 0.1fr;
@@ -23,10 +23,9 @@ body{
 
 .main {
     grid-area: main;
-    margin-left: auto;
-    margin-right: auto;
     background:rgba(255, 255, 255, 0.356);
     border-radius: 20px;
+    justify-self: center;
 }
 
 .logoImg{
@@ -47,7 +46,6 @@ body{
 .hrLine{
     width: 400px;
     color: rgba(255, 255, 255, 0.26);
-    
 }
 
 

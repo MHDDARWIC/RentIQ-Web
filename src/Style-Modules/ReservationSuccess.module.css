@@ -3,8 +3,8 @@
 .gridContainer {
     display: grid;
     grid-template-columns: 0.1fr 2.8fr 0.1fr;
-    grid-template-rows: 0.4fr 2.3fr 0.3fr;
-    gap: 0px 0px;
+    grid-auto-rows: minmax(min-content,max-content);
+    gap: 10px 0px;
     grid-template-areas:
       ". logo ."
       ". success ."
@@ -13,17 +13,15 @@
   
   .logo {
       grid-area: logo;
+      justify-self: center;
     }
   
   .success {
       grid-area: success;
-      display: block;
-      margin-left: auto;
-      margin-right:auto;
       background:rgba(255, 255, 255, 0.178);
       border-radius: 20px;
       width: 70%;
-    
+      justify-self: center;
  }
 
  .logoImg{
@@ -35,25 +33,21 @@
     display: block;
     margin-left: auto;
     margin-right:auto;
-
-
 }
-
-
 
 .buttons{
     display: block;
     margin-left: auto;
     margin-right:auto;
-    margin-bottom: 2%;
+    margin-bottom: 15px;
     font-size: 20px;
     height: 80px;
     width: 280px;
     background-color: #00fa9a96;
     border-radius: 20px;
     color: white;
-    border:none;
     font-family: 'Gruppo',cursive;
+    border:none;
 }
 
 .buttons:hover{

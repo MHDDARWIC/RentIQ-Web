@@ -73,33 +73,31 @@ function Reserve() {
 
             <div className={styles.form}>
                 <p className={styles.title}>Please enter the reserver's information</p>
-                <img src={divider} alt="divider" className={styles.divider}/>
+                <img src={divider} alt="divider" className={styles.divider} />
                 <form onSubmit={handleSubmit}>
                     <label for="customerName" className={styles.labels}>Full Name:</label>
-                    <br />
                     <input type="text" id="customerName" value={customerName} onChange={(e) => setCustomerName(e.target.value)} className={styles.inputField} required />
-                    <br />
 
                     <label for="customerEmail" className={styles.labels}>Email Address:</label>
-                    <br />
                     <input type="email" id="customerEmail" value={customerEmail} onChange={(e) => setCustomerEmail(e.target.value)} className={styles.inputField} required />
-                    <br />
 
                     <label for="customerPhone" className={styles.labels}>Phone Number:</label>
-                    <br />
                     <input type="phone" id="customerPhone" value={customerPhone} onChange={(e) => setCustomerPhone(e.target.value)} className={styles.inputField} required />
-                    <br />
+                    <div className={styles.dateIn}>
+                        <label for="reserverPickupDate" className={styles.labels}>Car Pickup Date and Time:</label>
+                        <input type="date" id="reserverPickupDate" value={reserverPickupDate} onChange={(e) => setReserverPickupDate(e.target.value)} className={styles.inputFieldDate} required />
+                        <input type="time" id="reserverPickupTime" value={reserverPickupTime} onChange={(e) => setReserverPickupTime(e.target.value)} className={styles.inputFieldTime} required />
+                    </div>
 
-                    <label for="reserverPickupDate" className={styles.labels}>Car Pickup Date and Time:</label>
-                    <br />
-                    <input type="date" id="reserverPickupDate" value={reserverPickupDate} onChange={(e) => setReserverPickupDate(e.target.value)} className={styles.inputFieldDate} required />
-                    <input type="time" id="reserverPickupTime" value={reserverPickupTime} onChange={(e) => setReserverPickupTime(e.target.value)} className={styles.inputFieldTime} required />
-
-                    <br />
+                    <div className={styles.dateIn}>
                     <label for="reserverReturnDate" className={styles.labels}>Car Return Date and Time:</label>
-                    <br />
                     <input type="date" id="reserverReturnDate" value={reserverReturnDate} onChange={(e) => setReserverReturnDate(e.target.value)} className={styles.inputFieldDate} required />
                     <input type="time" id="reserverReturnTime" value={reserverReturnTime} onChange={(e) => setReserverReturnTime(e.target.value)} className={styles.inputFieldTime} required />
+
+                    </div>
+
+
+                    
 
                     <button className={styles.button} type="submit">To Car Selection</button>
                 </form>

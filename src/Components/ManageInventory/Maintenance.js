@@ -9,7 +9,7 @@ import InventoryCar from './InventoryCar';
 import { Link, useHistory } from 'react-router-dom';
 import MaintenanceCar from './MaintenanceCar';
 
-function Maintenance(){
+function Maintenance() {
     const { currentUser } = useAuth();
     const [documents] = useGetData();
     const [currentDoc, setCurrentDoc] = useState("");
@@ -39,24 +39,20 @@ function Maintenance(){
         </div>
     ) : (
         <div className={styles.gridContainer}>
-            
-            <div className={styles.header}>
-                <div className={styles.logo}>
-                    <img src={logo} className={styles.logoImg} alt="rentiq logo" onClick={() => { history.push('/') }} />
-                <p className={styles.titleText}>Maintenance</p>
-                    
-                </div>
-                
 
-                <div className={styles.title}>
-                </div>
+            <div className={styles.header}>
+                <img src={logo} className={styles.logoImg} alt="rentiq logo" onClick={() => { history.push('/') }} />
+            </div>
+
+            <div className={styles.title}>
+                <p className={styles.titleText}>Maintenance</p>
             </div>
 
             <div className={styles.cars}>
-                
-                {cars.map((car) => (car.needMaintenance==true) ? (
-                        <MaintenanceCar car={car} />
-                    ) : (console.log('removed')))}
+
+                {cars.map((car) => (car.needMaintenance == true) ? (
+                    <MaintenanceCar car={car} />
+                ) : (console.log('removed')))}
             </div>
 
 

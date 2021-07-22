@@ -139,7 +139,7 @@ function CompleteReservation() {
 
                     <div className={styles.resInfo}>
                         <p className={styles.totalStyle} style={{fontSize:'20px'}}>Total: </p>
-                        <p className={styles.totalStyle} style={{position:'relative',bottom:'15%'}}>${cars[tempKey].totalPrice}</p>
+                        <p className={styles.totalStyle}>${cars[tempKey].totalPrice}</p>
                         <p className={styles.infoStyle}>From: {cars[tempKey].reserverPickupDate} to: {cars[tempKey].reserverReturnDate} ({cars[tempKey].rentalDays} days)</p>
                         <p className={styles.infoStyle}>Renter: {cars[tempKey].currentReserverName}</p>
                         <p className={styles.infoStyle}>Email: {cars[tempKey].currentReserverEmail}</p>
@@ -149,19 +149,19 @@ function CompleteReservation() {
 
                 <div className={styles.input}>
                 <label for="DL" className={styles.labels}>Driver's License Number:</label>
-                        <br />
+                        
                         <input type="text" id="DL" value={DL} onChange={(e) => setDL(e.target.value)} className={styles.inputField} required />
-                        <br />
+                        
 
                         <label for="DOB" className={styles.labels}>Renter's Date of Birth:</label>
-                        <br />
+                        
                         <input type="date" id="DOB" value={dob} onChange={(e) => setDOB(e.target.value)} className={styles.inputField} required />
-                        <br />
+                        
 
                         <label for="extraNotes" className={styles.labels}>Extra Notes (optional):</label>
-                        <br />
+                        
                         <textarea type="text" id="extraNotes" value={extraNotes} onChange={(e) => setExtraNotes(e.target.value)} className={styles.textArea} />
-                        <br />
+                        
 
                         <button className={styles.button} onClick={handleSubmit}>Finalize and Rent</button>
 

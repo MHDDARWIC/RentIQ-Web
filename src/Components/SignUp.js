@@ -68,12 +68,6 @@ function SignUp() {
             setLoading(false);
 
         }
-
-        
-    }
-
-    const checkPassword = () => {
-
     }
 
     return (
@@ -90,28 +84,22 @@ function SignUp() {
                 <form onSubmit={handleSubmit}>
                     <label for="businessName" className={styles.labels}>Business Name:</label>
                     <input type="text" id="businessName" value={business} onChange={(e) => setBusiness(e.target.value)} className={styles.inputField} required />
-                    <br/>
 
                     <label for="email" className={styles.labels}>Email:</label>
                     <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} className={styles.inputField} required />
-                    <br/>
 
                     <label for="password" className={styles.labels}>Password:</label>
                     <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} className={styles.inputField} required />
                     <p className={styles.passLength}>Passwords must contain at least 8 characters</p>
-                    <br/>
 
                     <label for="confirmPassword" className={styles.labels}>Confirm Password:</label>
                     <input type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className={styles.inputField} required />
-                    <br/>
 
                     <label for="phone" className={styles.labels}>Phone Number:</label>
                     <input type="phone" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} className={styles.inputField} required />
-                    <br/>
 
                     <label for="inventoryCapacity" className={styles.labels}>Inventory Capacity:</label>
                     <input type="text" placeholder="e.g. 25" id="inventoryCapacity" value={inventoryCapacity} onChange={(e) => setInventoryCapacity(e.target.value)} className={styles.inputField} required />
-                    <br/>
 
                     <button type="submit" disabled={loading} className={styles.button}>Sign Up</button>
 

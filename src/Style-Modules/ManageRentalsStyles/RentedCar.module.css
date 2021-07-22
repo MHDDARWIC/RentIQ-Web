@@ -2,8 +2,8 @@
 .gridContainer {
     display: grid;
     grid-template-columns: 0.1fr 2fr 0.1fr;
-    grid-template-rows: 0.1fr 2.8fr 0.1fr;
-    gap: 0px 0px;
+    grid-auto-rows: minmax(min-content,max-content);
+    gap: 10px 0px;
     grid-template-areas:
       ". . ."
       ". car ."
@@ -14,12 +14,9 @@
     display: grid;
     grid-template-columns: 1fr;
     background:rgba(128, 128, 128, 0.363);
-  border: solid 1px white;
-  border-radius: 20px;
-  
-    height: fit-content;
-    margin-top: 2%;
-    grid-template-rows: 0.4fr 2.3fr 0.3fr;
+    border: solid 1px white;
+    border-radius: 20px;
+    grid-auto-rows: minmax(min-content,max-content);
     gap: 0px 0px;
     grid-template-areas:
       "title"
@@ -77,10 +74,6 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  position: relative;
-  top: 10%;
 }
 
 .extendButton{
@@ -126,7 +119,6 @@
     color: #ff40369f;
     cursor: pointer;
     font-size: 18px;
-
   }
 
 .renterDetails{

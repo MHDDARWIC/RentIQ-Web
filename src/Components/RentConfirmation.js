@@ -168,7 +168,7 @@ function RentConfirmation() {
             <div className={styles.confirm}>
                 <div className={styles.carInfo}>
                     <img src={cars[tempKey].carImg} className={styles.carImg} />
-                    <p className={styles.cardata} style={{ fontSize: "50px", marginTop: "-10%" }}>{cars[tempKey].carMake} {cars[tempKey].carModel} {cars[tempKey].carYear} </p>
+                    <p className={styles.cardata} style={{ fontSize: "50px"}}>{cars[tempKey].carMake} {cars[tempKey].carModel} {cars[tempKey].carYear} </p>
                     <p className={styles.cardata}>{cars[tempKey].mileage} Miles</p>
                     <p className={styles.cardata}>Rate: ${cars[tempKey].rate}/day</p>
                 </div>

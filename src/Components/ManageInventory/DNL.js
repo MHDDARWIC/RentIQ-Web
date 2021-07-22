@@ -69,8 +69,6 @@ function DNL() {
 
             <div className={styles.title}>
                 <p className={styles.titleStyle}>Do not rent list</p>
-                <img src={divider} className={styles.dividerStyle}/>
-
             </div>
 
             <div className={styles.main}>

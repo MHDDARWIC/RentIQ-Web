@@ -26,8 +26,8 @@ function Rent() {
     const renterPickupDate = new Date().toLocaleDateString();
     const renterPickupTime = new Date().toLocaleTimeString();
     const [extraNotes, setExtraNotes] = useState("");
-    const [dnl,setDnl]=useState([]);
-    var rent=true;
+    const [dnl, setDnl] = useState([]);
+    var rent = true;
 
     useEffect(() => {
         //getting the specific doc out of all the docs
@@ -43,13 +43,13 @@ function Rent() {
     function handleSubmit(e) {
         e.preventDefault();
         //To do: check do not rent list
-        for(var j=0; j<dnl.length; j++){
-            if(dnl[j]==renterDL){
-                rent=false;
+        for (var j = 0; j < dnl.length; j++) {
+            if (dnl[j] == renterDL) {
+                rent = false;
             }
         }
 
-        if(rent==true){
+        if (rent == true) {
             let renter = {
                 "customerName": customerName,
                 "customerEmail": customerEmail,
@@ -62,7 +62,7 @@ function Rent() {
                 "renterReturnTime": renterReturnTime,
                 "extraNotes": extraNotes
             }
-    
+
             db.collection("businesses")
                 .doc(currentDoc.id)
                 .update({
@@ -76,10 +76,10 @@ function Rent() {
                     console.error("Error writing Value: ", error);
                     //navigate to failure screen 
                 });
-        } else{
+        } else {
             history.push('/warning');
         }
-        
+
 
     }
 
@@ -98,42 +98,33 @@ function Rent() {
                 <div className={styles.input}>
                     <div className={styles.pOne}>
                         <label for="customerName" className={styles.labels}>Full Name:</label>
-                        <br />
                         <input type="text" id="customerName" value={customerName} onChange={(e) => setCustomerName(e.target.value)} className={styles.inputField} required />
-                        <br />
 
                         <label for="customerEmail" className={styles.labels}>Email Address:</label>
-                        <br />
                         <input type="email" id="customerEmail" value={customerEmail} onChange={(e) => setCustomerEmail(e.target.value)} className={styles.inputField} required />
-                        <br />
 
                         <label for="customerPhone" className={styles.labels}>Phone Number:</label>
-                        <br />
                         <input type="phone" id="customerPhone" value={customerPhone} onChange={(e) => setCustomerPhone(e.target.value)} className={styles.inputField} required />
-                        <br />
 
                         <label for="renterDL" className={styles.labels}>Driver's License Number:</label>
-                        <br />
                         <input type="text" id="renterDL" value={renterDL} onChange={(e) => setRenterDL(e.target.value)} className={styles.inputField} required />
-                        <br />
+                    
+                        <label for="renterDOB" className={styles.labels}>Renter's Date of Birth:</label>
+                        <input type="date" id="renterDOB" value={renterDOB} onChange={(e) => setRenterDOB(e.target.value)} className={styles.inputField} required />
+                    
                     </div>
 
                     <div className={styles.pTwo}>
-                        <label for="renterDOB" className={styles.labels}>Renter's Date of Birth:</label>
-                        <br />
-                        <input type="date" id="renterDOB" value={renterDOB} onChange={(e) => setRenterDOB(e.target.value)} className={styles.inputField} required />
-                        <br />
+                        
 
-                        <label for="renterReturnDate" className={styles.labels}>Car Return Date and Time:</label>
-                        <br />
-                        <DatePicker selected={renterReturnDate} className={styles.inputFieldDate} onChange={date => setRenterReturnDate(date)} />
-                        <input type="time" id="renterReturnTime" value={renterReturnTime} onChange={(e) => setRenterReturnTime(e.target.value)} className={styles.inputFieldTime} required />
-
-                        <br />
-                        <label for="extraNotes" className={styles.textAreaLabel}>Extra Notes (optional):</label>
-                        <br />
+                        <label for="renterReturnDate" className={styles.labels}>Car Return Date:</label>
+                        <DatePicker selected={renterReturnDate} className={styles.inputField} onChange={date => setRenterReturnDate(date)} required />
+                        
+                        <label for="renterReturnDate" className={styles.labels}>Car Return Time:</label>
+                        <input type="time" id="renterReturnTime" value={renterReturnTime} onChange={(e) => setRenterReturnTime(e.target.value)} className={styles.inputField} required />
+                        
+                        <label for="extraNotes" className={styles.labels}>Extra Notes (optional):</label>
                         <textarea type="text" id="extraNotes" value={extraNotes} placeholder="eg: Needs GPS Unit" onChange={(e) => setExtraNotes(e.target.value)} className={styles.textArea} />
-                        <br />
                     </div>
                 </div>
 

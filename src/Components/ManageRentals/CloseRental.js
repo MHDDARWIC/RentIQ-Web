@@ -148,7 +148,7 @@ function CloseRental(){
                 </div>
 
                 <div className={styles.input}>
-                    <label for="returningMileage" className={styles.labels}>Returning Mileage: </label>
+                    <label for="returningMileage" className={styles.labels} style={{textAlign:'center',display:'block'}}>Returning Mileage: </label>
                     <input type="text" id="returningMileage" value={returningMileage} onChange={(e) => setReturningMileage(e.target.value)} className={styles.inputField} required />
                     
                     <label className={styles.labels}>Does the car require Maintenance? </label>
@@ -159,7 +159,7 @@ function CloseRental(){
                     
                     <br/>
                     <br/>
-                    <label className={styles.labels} for="maintenanceType">Maintenance Description:</label>
+                    <label className={styles.labels} style={{textAlign:'center',display:'block'}} for="maintenanceType">Maintenance Description:</label>
                     <textarea id="maintenanceType" value={maintenanceType} onChange={(e) => setMaintenanceType(e.target.value)} className={styles.textArea}></textarea>
                 
                     <button className={styles.button} onClick={handleSubmit}>Close Rental</button>

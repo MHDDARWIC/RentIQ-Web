@@ -3,30 +3,31 @@
 .gridContainer {
   display: grid;
   grid-template-columns: 0.1fr 1.9fr 0.1fr;
-  grid-template-rows: 0.3fr 2.3fr;
-  gap: 0px 0px;
+  grid-auto-rows: minmax(min-content,max-content);
+  gap: 20px 0px;
   grid-template-areas:
     ". logo ."
     ". main .";
 }
 
-.logo { grid-area: logo; }
+.logo {
+  grid-area: logo;
+  justify-self: center;
+}
 
 .main {
   display: grid;
   background:rgba(255, 255, 255, 0.178);
   border-radius: 20px;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.7fr 1.3fr;
+  grid-auto-rows: minmax(min-content,max-content);
   gap: 0px 0px;
   grid-template-areas:
     "info"
     "input";
   grid-area: main;
-  width: fit-content;
-  height: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  justify-self: center;
+  align-self: center;
 }
 
 .info {
@@ -45,16 +46,10 @@
 
 .priceInfo { grid-area: priceInfo; }
 
-.input {
-  grid-area: input;
-  height: fit-content;
- }
+.input {grid-area: input;}
 
 .logoImg{
-    height: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  height: 50px;
 }
 
 .carLogoImg{
@@ -90,7 +85,6 @@
     display: block;
     margin-left: auto;
     margin-right:auto;
-   
     height: 50px;
     width: 180px;
     color: rgb(238, 224, 224);
@@ -99,6 +93,7 @@
     font-size: 18px;
     border:none;
     font-family: 'Gruppo',cursive;
+    margin-bottom: 20px;
   }
   
   .button:hover{

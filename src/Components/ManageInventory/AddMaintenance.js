@@ -18,7 +18,7 @@ function AddMaintenance() {
     const [errorMessage, setErrorMessage] = useState("");
     const [tempKey, setTempKey] = useState("");
     const [currentCar, setCurrentCar] = useState();
-    const [maintenanceType,setMaintenanceType]=useState("");
+    const [maintenanceType, setMaintenanceType] = useState("");
 
     const db = firebase.firestore();
 
@@ -45,7 +45,7 @@ function AddMaintenance() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        
+
         let car = {
             "key": currentCar.key,
             "vin": currentCar.vin,
@@ -89,7 +89,7 @@ function AddMaintenance() {
             "rentalDays": currentCar.rentalDays,
             "totalPrice": currentCar.totalPrice,
             "rentalTimes": currentCar.rentalTimes,
-            "available":true,
+            "available": true,
         }
         console.log(car)
         cars[tempKey] = car;
@@ -98,12 +98,12 @@ function AddMaintenance() {
         db.collection("businesses")
             .doc(currentDoc.id)
             .update({
-                cars:cars,
+                cars: cars,
                 tempKey: -1,
             })
             .then(function () {
                 history.push('/manage-inventory');
-              
+
             })
             .catch(function (error) {
                 console.error("Error writing Value: ", error);
@@ -120,24 +120,20 @@ function AddMaintenance() {
     ) : (
         <div className={styles.gridContainer}>
             <div className={styles.header}>
-                <div className={styles.logo}>
-                    <img src={logo} alt="rentiq logo" className={styles.logoImg} />
-                </div>
-
-                <div className={styles.title}>
-                </div>
-
+                <img src={logo} alt="rentiq logo" className={styles.logoImg} />
             </div>
 
             <div className={styles.main}>
                 <img src={cars[tempKey].carImg} className={styles.carImg} />
                 <p className={styles.carInformation}>{cars[tempKey].carMake} {cars[tempKey].carModel} {cars[tempKey].carYear}</p>
                 <p className={styles.carInformation} style={{ fontSize: '15px' }}>VIN: {cars[tempKey].vin}</p>
-                <img src={divider} className={styles.dividerStyle}/>
+                <img src={divider} className={styles.dividerStyle} />
+                <div className={styles.formStyle}>
+                    <label className={styles.label} for="maintenanceType">Describe the required maintenance:</label>
+                    <textarea id="maintenanceType" className={styles.textArea} value={maintenanceType} onChange={(e) => setMaintenanceType(e.target.value)} ></textarea>
+                    <button className={styles.button} onClick={handleSubmit}>Add to Maintenance</button>
+                </div>
 
-                <label className={styles.label} for="maintenanceType">Describe the required maintenance:</label>
-                <textarea id="maintenanceType"className={styles.textArea} value={maintenanceType} onChange={(e) => setMaintenanceType(e.target.value)} ></textarea>
-                <button className={styles.button} onClick={handleSubmit}>Add to Maintenance</button>
             </div>
         </div>
     )

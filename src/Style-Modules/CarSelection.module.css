@@ -1,8 +1,8 @@
 .gridContainer {
     display: grid;
     grid-template-columns: 0.1fr 1.9fr 0.1fr;
-    grid-template-rows: 0.5fr 2.4fr 0.1fr;
-    gap: 0px 0px;
+    grid-auto-rows: minmax(min-content,max-content);
+    gap: 10px 0px;
     grid-template-areas:
       ". logo ."
       ". results ."
@@ -11,25 +11,21 @@
   
   .logo {
       grid-area: logo;
-      height: fit-content;
     }
   
   .results {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
+    grid-auto-rows: minmax(min-content,max-content);
+    gap: 20px 0px;
     grid-template-areas:
       ". . .";
-    grid-area: results;
-    height: fit-content;
-    position: relative;
-    bottom: 7%;
+    grid-area: results;    
   }
   
-
 .logoImg{
     height: 50px;
+    margin-bottom: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -39,7 +35,6 @@
   font-size: 35px;
   font-family: 'Gruppo', cursive;  
   color: white;
-  position: relative;
-  left: 20px;
+  margin: 0;
 }
 

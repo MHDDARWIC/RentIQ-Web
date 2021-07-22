@@ -3,8 +3,8 @@
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 1.8fr;
-  gap: 0px 0px;
+  grid-auto-rows: minmax(min-content,max-content);
+  gap: 15px 0px;
   grid-template-areas:
     "header"
     "main";
@@ -20,7 +20,9 @@
   grid-area: header;
 }
 
-.logo { grid-area: logo; }
+.logo {
+  grid-area: logo;
+}
 
 .account {
   grid-area: account;
@@ -41,7 +43,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1.5fr 0.5fr;
-  gap: 0px 0px;
+  gap: 10px 0px;
   grid-template-areas:
     "bar"
     "buttons";
@@ -55,59 +57,45 @@
   width: fit-content;
   height: fit-content;
   border-radius: 20px;
-  
- }
+}
 
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
+  grid-auto-rows: minmax(min-content,max-content);
+  gap: 8px 0px;
   grid-template-areas:
     ". . ."
     ". . .";
   grid-area: buttons;
-  height: fit-content;
-  position: relative;
-  top: 15px;
-  justify-self: center;
- 
-
+  margin-left: 20px;
 }
 
 .pTwo {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
+  gap: 20px 0px;
   grid-template-areas:
     "wheelOne"
     "wheelTwo"
     "wheelThree";
   grid-area: pTwo;
-  height: fit-content;
-  justify-self: center;
 }
 
 .wheelOne {
   grid-area: wheelOne;
   height: fit-content;
-  margin-bottom: 20px;
-  
  }
 
 .wheelTwo {
   grid-area: wheelTwo;
   height: fit-content;
-  margin-bottom: 20px;
-  
  }
 
 .wheelThree {
   grid-area: wheelThree;
   height: fit-content;
-  margin-bottom: 20px;
-  justify-self: center;
  }
 
 .logoImg{
@@ -127,11 +115,6 @@
     border:none;
     font-family: 'Gruppo',cursive;
     font-size: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-   
 }
 
 .menuButtons:hover{
@@ -140,16 +123,7 @@
     cursor: pointer;
     font-size: 30px;
     transition: 0.6s;
-    
 }
-
-.sides{
-  font-size: 20px;
-  color: white;
-  font-family: 'Gruppo', cursive;
-  text-align: center;
-}
-
 
 .doughnutGraph{
   display: block;
@@ -157,7 +131,6 @@
   margin-right: auto;
   height: 200px;
   width: 250px;
-  margin-bottom: 60px;
 }
 
 .doughnutTitle{
@@ -174,7 +147,6 @@
   font-size: 40px;
   font-family: 'Gruppo',cursive;
   margin:0;
-
 }
 
 .signOutButton{
